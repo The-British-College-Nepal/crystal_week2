@@ -1,26 +1,35 @@
+
 package counter;
 
 /**
- * Step 1: Complete the Counter interface contract.
- *
- * An interface defines a set of operations that classes must provide.
- * Methods declared in an interface have no body and are implicitly public and abstract.
- *
- * Your tasks in Step 1:
- * 1. Declare the method to count words in a sentence:
- *    int countWords(String sentence);
- * 2. Declare the method to count letters in a sentence:
- *    int countLetters(String sentence);
- * 3. Declare the method to get total sentence length:
- *    int getLength(String sentence);
- * 4. Add informative Javadoc comments to each method describing its purpose.
+ * Defines the operations for analysing a sentence.
+ * Classes implementing this interface must provide
+ * methods to count words, count letters and get length.
  */
 public interface Counter {
 
-    // TODO [Step 1.1]: Declare int countWords(String sentence);
+    /**
+     * Counts the number of words in a sentence.
+     *
+     * @param sentence the sentence to analyse
+     * @return the total number of words
+     */
+    int countWords(String sentence);
 
-    // TODO [Step 1.2]: Declare int countLetters(String sentence);
+    /**
+     * Counts the total number of alphabetic letters in a sentence.
+     *
+     * @param sentence the sentence to analyse
+     * @return the total number of letters
+     */
+    int countLetters(String sentence);
 
-    // TODO [Step 1.3]: Declare int getLength(String sentence);
-
+    /**
+     * Gets the total character length of a sentence,
+     * including spaces.
+     *
+     * @param sentence the sentence to analyse
+     * @return the total length of the sentence
+     */
+    int getLength(String sentence);
 }
