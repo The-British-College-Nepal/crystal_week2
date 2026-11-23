@@ -11,7 +11,7 @@ public class WordProcessor implements Counter {
 
     // STEP 3.2: Getter
     public String getText() {
-        return text;
+        return this.text;
     }
 
     // STEP 3.2: Setter
@@ -19,36 +19,31 @@ public class WordProcessor implements Counter {
         this.text = text;
     }
 
-    // STEP 2.1 and STEP 3.3
+    // STEP 2.1 and STEP 3.3: Count words
     @Override
     public int countWords(String sentence) {
 
-        // If sentence is null, use saved text
         if (sentence == null) {
             sentence = this.text;
         }
 
-        // If sentence is empty, return 0
         if (sentence.isEmpty()) {
             return 0;
         }
 
-        // Split sentence using spaces and count words
         return sentence.split(" ").length;
     }
 
-    // STEP 2.2 and STEP 3.3
+    // STEP 2.2 and STEP 3.3: Count letters
     @Override
     public int countLetters(String sentence) {
 
-        // If sentence is null, use saved text
         if (sentence == null) {
             sentence = this.text;
         }
 
         int letters = 0;
 
-        // Check every character
         for (int i = 0; i < sentence.length(); i++) {
 
             char ch = sentence.charAt(i);
@@ -61,11 +56,10 @@ public class WordProcessor implements Counter {
         return letters;
     }
 
-    // STEP 2.3 and STEP 3.3
+    // STEP 2.3 and STEP 3.3: Get length
     @Override
     public int getLength(String sentence) {
 
-        // If sentence is null, use saved text
         if (sentence == null) {
             sentence = this.text;
         }
